@@ -1,7 +1,7 @@
 print("Title of program: Post Exam Activity bot")
 print()
 while True:
-  description = input("Could you describe how you feel in a sentence?")
+  description = input("Could you describe how you feel after the examinations?")
 
   list_of_words = description.split()
 
@@ -23,6 +23,10 @@ while True:
       feelings_list.append("tiring")
       encouragement_list.append("Get some sleep")
       counter += 1
+    if each_word == "relieved":
+      feelings_list.append("relieved")
+      encouragement_list.append("Relax after the stressful examinations")
+      counter += 1
 
   if counter == 0:
     
@@ -30,7 +34,7 @@ while True:
 
   elif counter == 1:
     
-      output = "It seems that you are feeling quite " + feelings_list[0] + ". However, do remember that "+ encouragement_list[0] + "! Hope you feel better :)"  
+      output = "It seems that you are feeling quite " + feelings_list[0] + ". However, do remember to "+ encouragement_list[0] + "! Hope you feel better :)"  
 
   else:
 
